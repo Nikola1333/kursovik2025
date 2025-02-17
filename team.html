@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Состав команды "АРМО"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="img/АРМО гл лого.jpg" alt="Логотип АРМО" class="logo" width="150" height="145">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html#home" class="offset">Главная</a></li>
+                    <li><a href="index.html#news" class="offset">Новости</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="offset">О команде</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="team.html" class="offset">Состав команды</a></li>
+                            <li><a href="gallery.html" class="offset">Галерея</a></li>
+                            <li><a href="#trainings" class="offset">Тренировки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#calendar" class="offset">Календарь игр</a></li>
+                    <li><a href="index.html#contacts" class="offset">Контакты</a></li>
+                </ul>
+            </nav>
+            <button id="authButton" class="offset" style="margin-right: 15px;">Войти/Зарегистрироваться</button>
+            <button id="themeToggle" class="offset" style="margin-right: 15px;">
+                <span id="themeIcon">🌙</span> <!-- Иконка для тёмной темы -->
+            </button>
+            <div class="contact-info">
+                <p>8 905 234 78 98</p>
+                <p>Bodunov@mail.ru</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="img/icons8-vk-в-круге.gif" alt="VK" class="social-icon"></a>
+                <a href="#"><img src="img/icons8-телеграмма-app.gif" alt="Telegram" class="social-icon"></a>
+                <a href="#"><img src="img/icons8-whatsapp.gif" alt="WhatsApp" class="social-icon"></a>
+            </div>
+        </div>
+    </header>
+
+        <!-- Модальное окно для входа/регистрации -->
+        <div id="authModal" class="modal">
+            <div class="modal-content">
+                <span class="close-auth-modal">&times;</span>
+                <form id="loginForm">
+                    <h2>Вход</h2>
+                    <input type="email" placeholder="Почта" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                    <p>Нет аккаунта? <a href="#" id="showRegisterForm">Зарегистрироваться</a></p>
+                </form>
+                <form id="registerForm" style="display: none;">
+                    <h2>Регистрация</h2>
+                    <input type="text" placeholder="Имя" required>
+                    <input type="email" placeholder="Почта" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <input type="password" placeholder="Повторите пароль" required>
+                    <button type="submit">Зарегистрироваться</button>
+                    <p>Уже есть аккаунт? <a href="#" id="showLoginForm">Войти</a></p>
+                </form>
+            </div>
+        </div>
+    
+    <!-- Модальное окно для тренировок -->
+    <div id="trainingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-training-modal">&times;</span>
+            <h2>Запись на тренировку</h2>
+            <p>Тренировка во (вт) в 21:30 на ВологдаАрена</p>
+            <form id="trainingForm">
+                <input type="text" placeholder="ФИО" required>
+                <input type="tel" placeholder="Номер телефона" required>
+                <button type="submit" class="offset">Записаться</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="team-section">
+        <h2 style="text-align: center; margin-top: 40px;">Состав команды "АРМО"</h2>
+        
+        <!-- Визитная карточка -->
+        <div class="team-card">
+            <img src="img/АРМО гл лого.jpg" alt="Логотип АРМО" class="team-logo">
+            <div class="team-info">
+                <p>АРМО, Вологда | Год основания: 2018</p>
+                <p>Телефон: +7 (8412) 23-21-71</p>
+                <p>Исполнительный директор: Бодунов Евгений Геннадьевич</p>
+                <p>И.о. главного тренера: Заплатников Егор Евгеньевич</p>
+                <p>Адрес: 160000, Российская Федерация, г. Вологда, ул. Поэта Александра Романова, д. 1</p>
+            </div>
+        </div>
+
+        <!-- Командная фотография -->
+        <h2 style="margin-top: 40px; margin-left: 10px;">Командная фотография</h2>
+        <img src="img/Команда.jpg" alt="Командная фотография" class="team-photo">
+
+        <!-- Таблица состава -->
+        <table class="team-table">
+            <thead>
+                <tr>
+                    <th>Фото</th>
+                    <th>Номер</th>
+                    <th>Игровое амплуа</th>
+                    <th>ФИО</th>
+                    <th>Год рождения</th>
+                    <th>Гражданство</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="img/player1.jpg" alt="Игрок 1" class="player-photo"></td>
+                    <td>52</td>
+                    <td>вратарь</td>
+                    <td>Арзамасцев Артём Дмитриевич</td>
+                    <td>19.07.2005</td>
+                    <td>Россия</td>
+                </tr>
+                <!-- Добавленные игроки -->
+                <tr>
+                    <td><img src="img/player2.jpg" alt="Игрок 2" class="player-photo"></td>
+                    <td>23</td>
+                    <td>защитник</td>
+                    <td>Иванов Иван Иванович</td>
+                    <td>12.05.2004</td>
+                    <td>Россия</td>
+                </tr>
+                <tr>
+                    <td><img src="img/player3.jpg" alt="Игрок 3" class="player-photo"></td>
+                    <td>45</td>
+                    <td>нападающий</td>
+                    <td>Петров Петр Петрович</td>
+                    <td>03.11.2003</td>
+                    <td>Россия</td>
+                </tr>
+                <!-- Остальные игроки -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>8 905 234 78 98</p>
+                <p>Bodunov@mail.ru</p>
+            </div>
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="img/icons8-vk-в-круге.gif" alt="VK" class="social-icon"></a>
+                    <a href="#"><img src="img/icons8-телеграмма-app.gif" alt="Telegram" class="social-icon"></a>
+                    <a href="#"><img src="img/icons8-whatsapp.gif" alt="WhatsApp" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Адрес</h3>
+                <p>г. Вологда, ул. Пугачёва 44</p>
+            </div>
+        </div>
+        <p>&copy; 2024 ХК АРМО</p>
+    </footer>
+</body>
+</html>
